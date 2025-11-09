@@ -8,8 +8,11 @@ import 'screens/add_record_screen.dart';
 import 'screens/statistics_screen.dart';
 import 'screens/settings_screen.dart';
 import 'screens/about_screen.dart';
+import 'services/notification_service.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await NotificationService.initialize();
   runApp(const HealthTrackerApp());
 }
 

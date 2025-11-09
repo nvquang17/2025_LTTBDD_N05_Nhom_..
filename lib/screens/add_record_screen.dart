@@ -33,7 +33,7 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
     final sleep = _sleepCtrl.text.isEmpty ? null : double.parse(_sleepCtrl.text);
     final record = HealthRecord(date: _date, weight: weight, waterLiters: water, sleepHours: sleep);
     InMemoryStore.addOrReplace(record);
-    Navigator.of(context).pop();
+    Navigator.of(context).pop(true);
   }
 
   @override
